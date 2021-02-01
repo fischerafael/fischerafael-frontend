@@ -1,11 +1,15 @@
-import React from 'react'
+import CustomHead from '../src/components/Head'
+
 import styled from 'styled-components'
 
 const home = () => {
     return (
-        <SectionContainerStyle>
-            <SectionContentStyle>oi</SectionContentStyle>
-        </SectionContainerStyle>
+        <>
+            <CustomHead pageTitle="Rafael Fischer" />
+            <SectionContainerStyle>
+                <SectionContentStyle>oi</SectionContentStyle>
+            </SectionContainerStyle>
+        </>
     )
 }
 
