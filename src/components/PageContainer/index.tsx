@@ -91,15 +91,34 @@ export const SectionContentStyle = styled.div`
 
     max-width: 1024px;
     width: 90%;
-    height: 100vh;
+    min-height: 100vh;
 `
 export const TwoColumnContentStyle = styled(SectionContentStyle)`
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-gap: 36px;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr;
+    }
 `
 export const ThreeColumnContentStyle = styled(SectionContentStyle)`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 36px;
+
+    margin-bottom: 10vh;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr;
+        width: 80%;
+    }
 `

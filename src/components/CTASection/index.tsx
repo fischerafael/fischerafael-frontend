@@ -21,7 +21,7 @@ export const CTASectionStyle = styled.div`
     flex-direction: column;
     justify-content: center;
 
-    width: 70%;
+    width: 100%;
 
     h1 {
         margin-top: 20vh;

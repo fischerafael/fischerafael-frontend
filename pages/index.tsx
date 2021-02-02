@@ -44,14 +44,6 @@ export const OneOneOneGridContentStyle = styled(SectionContentStyle)`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 18px;
-
-    @media (max-width: 802px) {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    @media (max-width: 600px) {
-        grid-template-columns: 1fr;
-    }
 `
 export const SubSectionContentStyle = styled.div`
     display: flex;
