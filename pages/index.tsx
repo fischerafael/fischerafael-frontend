@@ -1,61 +1,14 @@
 import CustomHead from '../src/components/Head'
+import PageContainer from '../src/components/PageContainer'
 
 import styled from 'styled-components'
-import VerticalCard from '../src/components/VerticalCard'
 
 const home = () => {
     return (
         <>
             <CustomHead pageTitle="Rafael Fischer" />
-            <PageContainerStyle>
-                <OneTwoGridContentStyle>
-                    <HeroImageSubSectionContentStyle>
-                        <HeroImageStyle>
-                            <div className="linear left-right"></div>
-                            <img
-                                src="https://images.unsplash.com/photo-1600267204026-85c3cc8e96cd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                                alt="Hero Image"
-                            />
-                            <div className="linear right-left"></div>
-                        </HeroImageStyle>
-                    </HeroImageSubSectionContentStyle>
-                    <SubSectionContentStyle>
-                        <HeaderStyle>
-                            Desenvolvimento Web, UI & UX Design e Inovação
-                        </HeaderStyle>
-                        <SubTitleStyle>
-                            Olá, me chamo Rafael Fischer e ajudo
-                            desenvolvedores, criativos e empresas.
-                        </SubTitleStyle>
-                    </SubSectionContentStyle>
-                </OneTwoGridContentStyle>
-            </PageContainerStyle>
-
-            <PageContainerStyle>
-                <OneOneOneGridContentStyle>
-                    <VerticalCard
-                        imgUrl="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80"
-                        cardTitle="Projetos"
-                        cardText="Desenvolvimento Web com tecnologias modernas como React, NodeJS & Typescript, UI & UX Design e produção de conteúdo para a internet."
-                        cardButton="Saiba Mais"
-                        marginTop="-10vh"
-                    />
-                    <VerticalCard
-                        imgUrl="https://images.unsplash.com/photo-1487537023671-8dce1a785863?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                        cardTitle="Conteúdos"
-                        cardText="Tutoriais em vídeo, podcasts, artigos de blog e cursos."
-                        cardButton="Saiba Mais"
-                        marginTop="-10vh"
-                    />
-                    <VerticalCard
-                        imgUrl="/hero-img.png"
-                        cardTitle="Projetos"
-                        cardText="Desenvolvimento Web com tecnologias modernas como React, NodeJS & Typescript, UI & UX Design e produção de conteúdo para a internet."
-                        cardButton="Saiba Mais"
-                        marginTop="-10vh"
-                    />
-                </OneOneOneGridContentStyle>
-            </PageContainerStyle>
+            <PageContainer twoColumnMain={true} />
+            <PageContainer threeColumn={true} />
         </>
     )
 }

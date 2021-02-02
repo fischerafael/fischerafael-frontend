@@ -1,19 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Button = ({ children }) => {
+interface IButton {
+    main?: boolean
+}
+
+const Button: React.FC<IButton> = ({ children, main }) => {
+    if (main === true) return <MainButtonStyle>{children}</MainButtonStyle>
+
     return <ButtonStyle>{children}</ButtonStyle>
 }
 
 export default Button
 
 export const ButtonStyle = styled.button`
-    height: 62px;
-    justify-self: flex-end;
+    height: 48px;
+
     cursor: pointer;
     border: none;
-
-    font: inherit;
 
     display: flex;
     align-items: center;
@@ -23,12 +27,17 @@ export const ButtonStyle = styled.button`
     color: ${({ theme }) => theme.colors.ligth};
     border-radius: ${({ theme }) => theme.card.borderRadius};
 
-    font-weight: 900;
-    font-size: 18px;
+    font: inherit;
+    font-weight: 700;
+    font-size: 14px;
 
     transition: 0.5s;
 
     &:hover {
         background: ${({ theme }) => theme.colors.primary};
     }
+`
+export const MainButtonStyle = styled(ButtonStyle)`
+    width: 200px;
+    margin-top: 24px;
 `
