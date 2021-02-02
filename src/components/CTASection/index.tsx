@@ -29,11 +29,19 @@ export const CTASectionStyle = styled.div`
         color: ${({ theme }) => theme.colors.primary};
         font-size: ${({ theme }) => theme.textSizes.title};
         font-weight: 900;
+
+        @media (max-width: 360px) {
+            font-size: 36px;
+        }
     }
 
     h2 {
         color: ${({ theme }) => theme.colors.ligth};
         font-size: ${({ theme }) => theme.textSizes.subtitle};
         font-weight: 400;
+
+        @media (max-width: 360px) {
+            font-size: ${({ theme }) => theme.textSizes.text};
+        }
     }
 `

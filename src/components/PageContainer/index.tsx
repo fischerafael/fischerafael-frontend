@@ -111,7 +111,7 @@ export const ThreeColumnContentStyle = styled(SectionContentStyle)`
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 36px;
 
-    margin-bottom: 10vh;
+    padding: 10vh 0;
 
     @media (max-width: 1024px) {
         grid-template-columns: 1fr 1fr;
@@ -119,6 +119,5 @@ export const ThreeColumnContentStyle = styled(SectionContentStyle)`
 
     @media (max-width: 800px) {
         grid-template-columns: 1fr;
-        width: 80%;
     }
 `
