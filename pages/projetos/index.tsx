@@ -1,8 +1,10 @@
 import CustomHead from '../../src/components/Head'
 import NavBar from '../../src/components/NavBar'
 import PageContainer from '../../src/components/PageContainer'
+import projects from '../../src/database/projects.json'
 
 const projetos = () => {
+    console.log(projects)
     return (
         <>
             <CustomHead pageTitle="Projetos - Rafael Fischer" />
