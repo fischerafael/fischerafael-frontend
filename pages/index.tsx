@@ -9,16 +9,7 @@ const home = () => {
             <CustomHead pageTitle="Rafael Fischer" />
             <PageContainerStyle>
                 <OneTwoGridContentStyle>
-                    <SubSectionContentStyle>
-                        <HeaderStyle>
-                            Desenvolvimento Web, UI & UX Design e Inovação
-                        </HeaderStyle>
-                        <SubTitleStyle>
-                            Olá, me chamo Rafael Fischer e ajudo
-                            desenvolvedores, criativos e empresas.
-                        </SubTitleStyle>
-                    </SubSectionContentStyle>
-                    <SubSectionContentStyle>
+                    <HeroImageSubSectionContentStyle>
                         <HeroImageStyle>
                             <div className="linear left-right"></div>
                             <img
@@ -27,6 +18,15 @@ const home = () => {
                             />
                             <div className="linear right-left"></div>
                         </HeroImageStyle>
+                    </HeroImageSubSectionContentStyle>
+                    <SubSectionContentStyle>
+                        <HeaderStyle>
+                            Desenvolvimento Web, UI & UX Design e Inovação
+                        </HeaderStyle>
+                        <SubTitleStyle>
+                            Olá, me chamo Rafael Fischer e ajudo
+                            desenvolvedores, criativos e empresas.
+                        </SubTitleStyle>
                     </SubSectionContentStyle>
                 </OneTwoGridContentStyle>
             </PageContainerStyle>
@@ -80,36 +80,75 @@ export const SectionContentStyle = styled.div`
 `
 export const OneTwoGridContentStyle = styled(SectionContentStyle)`
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 1fr;
     grid-gap: 18px;
+
+    @media (max-width: 802px) {
+        grid-template-columns: 1fr;
+    }
 `
 export const OneOneOneGridContentStyle = styled(SectionContentStyle)`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 18px;
+
+    @media (max-width: 802px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
 `
 export const SubSectionContentStyle = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
 `
+export const HeroImageSubSectionContentStyle = styled(SubSectionContentStyle)`
+    @media (max-width: 802px) {
+        display: none;
+    }
+`
 export const HeaderStyle = styled.h1`
     color: ${({ theme }) => theme.colors.primary};
     font-size: ${({ theme }) => theme.textSizes.title};
     font-weight: 900;
     line-height: 48px;
+
+    @media (max-width: 802px) {
+    }
+
+    @media (max-width: 600px) {
+        font-size: 36px;
+        align-self: center;
+    }
+
+    @media (max-width: 360px) {
+        font-size: 24px;
+        line-height: 36px;
+    }
 `
 export const SubTitleStyle = styled.h2`
     color: ${({ theme }) => theme.colors.ligth};
     font-size: ${({ theme }) => theme.textSizes.subtitle};
     font-weight: 400;
     line-height: 24px;
+
+    @media (max-width: 360px) {
+        font-size: 14px;
+        line-height: 18px;
+    }
 `
 export const HeroImageStyle = styled.div`
     position: relative;
     background: blue;
     width: 100%;
     height: 100vh;
+
+    @media (max-width: 802px) {
+        height: 50vh;
+    }
 
     img {
         z-index: 9;

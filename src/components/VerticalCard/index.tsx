@@ -53,6 +53,8 @@ export const CardContainerStyle = styled.div`
 
     transition: 0.5s;
 
+    margin-bottom: 10vh;
+
     &:hover {
         box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.5);
     }
