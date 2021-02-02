@@ -4,6 +4,7 @@ declare module 'styled-components' {
     export interface DefaultTheme {
         colors: {
             dark: string
+            ultraDark: string
             ligth: string
             primary: string
             secondary: string
@@ -15,6 +16,10 @@ declare module 'styled-components' {
             heading: string
         }
         button: {
+            height: string
+        }
+        card: {
+            borderRadius: string
             height: string
         }
     }
