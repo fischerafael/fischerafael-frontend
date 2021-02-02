@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import Button from '../Button'
+import Link from 'next/link'
 
 interface IVerticalCard {
     imgUrl: string
     cardTitle: string
     cardText: string
     cardButton: string
-    marginTop?: string
+    urlLink?: string
 }
 
 const VerticalCard: React.FC<IVerticalCard> = ({
@@ -15,20 +15,19 @@ const VerticalCard: React.FC<IVerticalCard> = ({
     cardTitle,
     cardText,
     cardButton,
-    marginTop
+    urlLink
 }) => {
     return (
-        <CardContainerStyle style={{ marginTop: marginTop }}>
+        <CardContainerStyle>
             <img src={imgUrl} alt="" />
             <div className="card-gradient"></div>
             <h2>{cardTitle}</h2>
             <div className="card-content">
-                <div className="card-content-text">
-                    <p>{cardText}</p>
-                </div>
-
-                <Button>{cardButton}</Button>
+                <p>{cardText}</p>
             </div>
+            <Link href={urlLink ? urlLink : '/'}>
+                <a>{cardButton}</a>
+            </Link>
         </CardContainerStyle>
     )
 }
@@ -41,7 +40,6 @@ export const CardContainerStyle = styled.div`
     position: relative;
 
     background: ${({ theme }) => theme.colors.ultraDark};
-    height: 500px;
 
     border-radius: ${({ theme }) => theme.card.borderRadius};
 
@@ -54,11 +52,11 @@ export const CardContainerStyle = styled.div`
     transition: 0.5s;
 
     &:hover {
-        box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.5);
+        box-shadow: 5px 5px 10px 5px rgba(5, 96, 138, 0.25);
     }
 
     img {
-        height: 300px;
+        height: 50vh;
         width: 100%;
         object-fit: cover;
 
@@ -76,7 +74,7 @@ export const CardContainerStyle = styled.div`
         left: 0;
 
         width: 100%;
-        height: 300px;
+        height: 50vh;
 
         background: linear-gradient(
             00deg,
@@ -89,7 +87,7 @@ export const CardContainerStyle = styled.div`
         z-index: 10;
 
         position: absolute;
-        bottom: 40%;
+        top: 40vh;
         left: 10%;
     }
 
@@ -97,18 +95,47 @@ export const CardContainerStyle = styled.div`
         width: 80%;
 
         display: flex;
+
         flex-direction: column;
-        height: 200px;
+        justify-content: center;
+        height: 20vh;
 
-        .card-content-text {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100px;
-
-            p {
-                font-size: 12px;
-            }
+        p {
+            font-size: 12px;
         }
+    }
+
+    a {
+        height: 10vh;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        border: none;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-decoration: none;
+
+        background: ${({ theme }) => theme.colors.secondary};
+        color: ${({ theme }) => theme.colors.ligth};
+
+        cursor: pointer;
+
+        transition: 0.5s;
+
+        font: inherit;
+        font-weight: 700;
+        font-size: 14px;
+
+        &:hover {
+            background: ${({ theme }) => theme.colors.primary};
+        }
+    }
+
+    .single {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 `

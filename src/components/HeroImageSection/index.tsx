@@ -3,9 +3,24 @@ import styled from 'styled-components'
 interface IHeroImage {
     imgUrl: string
     imgAlt: string
+    showResponsive?: boolean
 }
 
-const HeroImage: React.FC<IHeroImage> = ({ imgUrl, imgAlt }) => {
+const HeroImage: React.FC<IHeroImage> = ({
+    imgUrl,
+    imgAlt,
+    showResponsive
+}) => {
+    if (showResponsive === true)
+        return (
+            <FullHeroImgContainerStyle>
+                <div className="linear left-right"></div>
+                <img src={imgUrl} alt={imgAlt} />
+                <div className="linear right-left"></div>
+                <div className="linear-bottom-top"></div>
+            </FullHeroImgContainerStyle>
+        )
+
     return (
         <HeroImgContainerStyle>
             <div className="linear left-right"></div>
@@ -18,15 +33,11 @@ const HeroImage: React.FC<IHeroImage> = ({ imgUrl, imgAlt }) => {
 
 export default HeroImage
 
-export const HeroImgContainerStyle = styled.div`
+export const BaseHeroImgContainerStyle = styled.div`
     position: relative;
     background: ${({ theme }) => theme.colors.dark};
     width: 100%;
     height: 100vh;
-
-    @media (max-width: 800px) {
-        display: none;
-    }
 
     img {
         z-index: 9;
@@ -65,3 +76,9 @@ export const HeroImgContainerStyle = styled.div`
         right: 0;
     }
 `
+export const HeroImgContainerStyle = styled(BaseHeroImgContainerStyle)`
+    @media (max-width: 800px) {
+        display: none;
+    }
+`
+export const FullHeroImgContainerStyle = styled(BaseHeroImgContainerStyle)``
