@@ -5,15 +5,29 @@ import VerticalCard from '../VerticalCard'
 import styled from 'styled-components'
 import Link from 'next/link'
 
+import ThreeColumnSection from './ThreeColumnSection'
+
 interface IPageContainer {
-    type: 'two-column-main' | 'three-column' | 'one-column'
+    type:
+        | 'two-column-main'
+        | 'three-column-cards'
+        | 'three-column'
+        | 'one-column'
     oneColumnProps?: {
-        title: string
-        subTitle: string
+        author?: string
+        title?: string
+        subTitle?: string
+    }
+    threeColumnCardsProps?: {
+        projects?: IProject[]
     }
 }
 
-const PageContainer: React.FC<IPageContainer> = ({ type, oneColumnProps }) => {
+const PageContainer: React.FC<IPageContainer> = ({
+    type,
+    oneColumnProps,
+    threeColumnCardsProps
+}) => {
     if (type === 'two-column-main')
         return (
             <PageContainerStyle>
@@ -56,6 +70,9 @@ const PageContainer: React.FC<IPageContainer> = ({ type, oneColumnProps }) => {
             </PageContainerStyle>
         )
 
+    if (type === 'three-column-cards')
+        return <ThreeColumnSection projects={threeColumnCardsProps.projects} />
+
     if (type === 'one-column')
         return (
             <PageContainerStyle>
@@ -68,16 +85,18 @@ const PageContainer: React.FC<IPageContainer> = ({ type, oneColumnProps }) => {
                     <div className="meta">
                         <h1>{oneColumnProps?.title}</h1>
                         <h2>{oneColumnProps?.subTitle}</h2>
-                        <div className="meta-data">
-                            <img
-                                src="https://avatars.githubusercontent.com/u/47259718?v=4"
-                                alt="fischerafael - Github Avatar"
-                            />
-                            <span>por</span>
-                            <Link href="/sobre">
-                                <a>Rafael Fischer</a>
-                            </Link>
-                        </div>
+                        {oneColumnProps?.author && (
+                            <div className="meta-data">
+                                <img
+                                    src="https://avatars.githubusercontent.com/u/47259718?v=4"
+                                    alt="fischerafael - Github Avatar"
+                                />
+                                <span>por</span>
+                                <Link href="/sobre">
+                                    <a>{oneColumnProps.author}</a>
+                                </Link>
+                            </div>
+                        )}
                     </div>
                 </OneColumnContentStyle>
             </PageContainerStyle>

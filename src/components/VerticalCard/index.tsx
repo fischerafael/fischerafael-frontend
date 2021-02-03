@@ -8,6 +8,8 @@ interface IVerticalCard {
     cardText: string
     cardButton: string
     urlLink?: string
+    newPage?: true
+    tags?: true
 }
 
 const VerticalCard: React.FC<IVerticalCard> = ({
@@ -15,7 +17,9 @@ const VerticalCard: React.FC<IVerticalCard> = ({
     cardTitle,
     cardText,
     cardButton,
-    urlLink
+    urlLink,
+    newPage,
+    tags
 }) => {
     return (
         <CardContainerStyle>
@@ -26,7 +30,7 @@ const VerticalCard: React.FC<IVerticalCard> = ({
                 <p>{cardText}</p>
             </div>
             <Link href={urlLink ? urlLink : '/'}>
-                <a>{cardButton}</a>
+                <a target={newPage && '_blank'}>{cardButton}</a>
             </Link>
         </CardContainerStyle>
     )
@@ -89,6 +93,8 @@ export const CardContainerStyle = styled.div`
         position: absolute;
         top: 40vh;
         left: 10%;
+
+        cursor: default;
     }
 
     .card-content {
@@ -97,11 +103,13 @@ export const CardContainerStyle = styled.div`
         display: flex;
 
         flex-direction: column;
-        justify-content: center;
+
         height: 20vh;
 
         p {
-            font-size: 12px;
+            font-size: 10px;
+            line-height: 16px;
+            cursor: default;
         }
     }
 

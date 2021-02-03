@@ -1,10 +1,10 @@
 import CustomHead from '../../src/components/Head'
 import NavBar from '../../src/components/NavBar'
 import PageContainer from '../../src/components/PageContainer'
-import projects from '../../src/database/projects.json'
+
+import { projects } from '../../src/database/projects'
 
 const projetos = () => {
-    console.log(projects)
     return (
         <>
             <CustomHead pageTitle="Projetos - Rafael Fischer" />
@@ -13,10 +13,13 @@ const projetos = () => {
                 type="one-column"
                 oneColumnProps={{
                     title: 'Projetos',
-                    subTitle: 'Confira os projetos desenvolvidos'
+                    subTitle: 'Confira os melhores projetos desenvolvidos'
                 }}
             />
-            <PageContainer type="three-column" />
+            <PageContainer
+                type="three-column-cards"
+                threeColumnCardsProps={{ projects: projects }}
+            />
         </>
     )
 }
