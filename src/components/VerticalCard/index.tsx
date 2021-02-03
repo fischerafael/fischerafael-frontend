@@ -9,7 +9,7 @@ interface IVerticalCard {
     cardButton: string
     urlLink?: string
     newPage?: true
-    tags?: true
+    techs?: string[]
 }
 
 const VerticalCard: React.FC<IVerticalCard> = ({
@@ -19,13 +19,20 @@ const VerticalCard: React.FC<IVerticalCard> = ({
     cardButton,
     urlLink,
     newPage,
-    tags
+    techs
 }) => {
     return (
         <CardContainerStyle>
             <img src={imgUrl} alt="" />
             <div className="card-gradient"></div>
             <h2>{cardTitle}</h2>
+            {techs && (
+                <div className="techs">
+                    {techs.map((tech) => (
+                        <span>#{tech}</span>
+                    ))}
+                </div>
+            )}
             <div className="card-content">
                 <p>{cardText}</p>
             </div>
@@ -91,10 +98,31 @@ export const CardContainerStyle = styled.div`
         z-index: 10;
 
         position: absolute;
-        top: 40vh;
+        cursor: default;
         left: 10%;
+        top: 40vh;
+    }
+
+    .techs {
+        z-index: 10;
+        width: 80%;
+        position: absolute;
+        top: 5vh;
+
+        display: flex;
+
+        flex-wrap: wrap;
 
         cursor: default;
+
+        span {
+            padding: 2px 10px;
+            font-size: 8px;
+            margin: 2px;
+
+            background: rgba(0, 0, 0, 0.25);
+            cursor: default;
+        }
     }
 
     .card-content {

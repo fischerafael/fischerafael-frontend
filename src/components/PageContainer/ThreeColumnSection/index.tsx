@@ -18,6 +18,7 @@ const ThreeColumnSection: React.FC<IThreeColumnSection> = ({ projects }) => {
                             imgUrl={project.thumbnail}
                             cardTitle={project.title}
                             cardText={project.description}
+                            techs={project.techs}
                             cardButton="Ver Repositório"
                             urlLink={project.repo}
                             newPage={true}
