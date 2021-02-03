@@ -106,8 +106,6 @@ export const CardContainerStyle = styled.div`
     .techs {
         z-index: 10;
         width: 80%;
-        position: absolute;
-        top: 5vh;
 
         display: flex;
 
