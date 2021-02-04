@@ -108,18 +108,29 @@ export const CardContainerStyle = styled.div`
         width: 80%;
 
         display: flex;
+        height: 10vh;
 
         flex-wrap: wrap;
 
         cursor: default;
 
         span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
             padding: 2px 10px;
             font-size: 8px;
             margin: 2px;
 
-            background: rgba(0, 0, 0, 0.25);
+            background: ${({ theme }) => theme.colors.dark};
             cursor: default;
+
+            transition: 0.5s;
+
+            &:hover {
+                background: ${({ theme }) => theme.colors.primary};
+            }
         }
     }
 

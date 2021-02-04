@@ -1,16 +1,42 @@
 import CustomHead from '../src/components/Head'
-import NavBar from '../src/components/NavBar'
-import PageContainer from '../src/components/PageContainer'
+import HeroSection from '../src/components/organisms/HeroSection'
 
-const home = () => {
+import { GetStaticProps } from 'next'
+import styled from 'styled-components'
+
+import gitHubApi from '../src/services/github-api'
+
+const home = ({ userData }) => {
+    console.log(userData)
     return (
-        <>
-            <NavBar />
+        <PageLayoutStyle>
             <CustomHead pageTitle="Rafael Fischer" />
-            <PageContainer type="two-column-main" />
-            <PageContainer type="three-column" />
-        </>
+            <HeroSection />
+        </PageLayoutStyle>
     )
 }
 
 export default home
+
+export const PageLayoutStyle = styled.div`
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+`
+
+export const getStaticProps: GetStaticProps = async (context) => {
+    //const userDataResponse = await gitHubApi.get('users/fischerafael')
+    //const userData = userDataResponse.data
+    const userData = {}
+
+    return {
+        props: {
+            userData
+        }
+    }
+}

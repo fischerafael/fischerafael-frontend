@@ -1,10 +1,16 @@
 import styled from 'styled-components'
 
+import Link from 'next/link'
+
 const NavBar = () => {
     return (
         <DesktopNavBarStyle>
             <section>
-                <img src={'/fischerafael.svg'} alt="Logo Escrito" />
+                <Link href="/">
+                    <a>
+                        <img src={'/fischerafael.svg'} alt="Logo Escrito" />
+                    </a>
+                </Link>
             </section>
         </DesktopNavBarStyle>
     )

@@ -6,7 +6,7 @@ export const projects = [
         thumbnail:
             'https://www.inovex.de/blog/wp-content/uploads/2022/01/one-year-of-react-native.png',
         description:
-            'Aplicação NextJS - ReactJS desenvolvida em Typescript com o objetivo de permitir a criação de quizes sobre os mais variados assuntos. Desenvolvido na Segunda Imersão React, da Alura, o projeto foi premiado em 1º lugar, dentre mais de 1500, durante o evento.',
+            'Aplicação de de Quizes Online feita em NextJS - ReactJS com Typescript. Desenvolvido na Segunda Imersão React, da Alura, o projeto foi premiado em 1º lugar, dentre mais de 1500, durante o evento.',
         techs: ['react', 'nextjs', 'styled-components', 'typescript']
     },
     {
@@ -16,7 +16,7 @@ export const projects = [
         thumbnail:
             'https://www.inovex.de/blog/wp-content/uploads/2022/01/one-year-of-react-native.png',
         description:
-            'API Rest desenvolvida em Typescript com o objetivo de servir armazenar quizes, questões e ranking de usuários da aplicação AluraQuiz, desenvolvida na Segunda Imersão React, da Alura. Projeto premiado em 1º lugar, entre mais de 1500, durante o evento.',
+            'API Rest desenvolvida em NodeJS e Typescript com o objetivo de servir armazenar quizes, questões e ranking de usuários da aplicação AluraQuiz.',
         techs: [
             'typescript',
             'expressjs',
