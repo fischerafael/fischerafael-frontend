@@ -6,7 +6,8 @@ export const theme: DefaultTheme = {
         ultraDark: '#15171E',
         ligth: '#EDEEF1',
         primary: '#2FD7E7',
-        secondary: '#DC396A'
+        secondary: '#DC396A',
+        greyBlue: '#448186'
     },
     textSizes: {
         text: '14px',

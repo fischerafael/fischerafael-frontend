@@ -8,6 +8,7 @@ declare module 'styled-components' {
             ligth: string
             primary: string
             secondary: string
+            greyBlue: string
         }
         textSizes: {
             text: string

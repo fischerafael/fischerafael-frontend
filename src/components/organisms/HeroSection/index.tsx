@@ -1,20 +1,24 @@
 import SocialLinksContainer from '../../molecules/SocialLinksContainer'
+import HeroImage from '../../atoms/HeroImage'
 
 import styled from 'styled-components'
 
-const HeroSection = () => {
+interface IHeroSection {
+    title: string
+    subtitle: string
+    heroImage: string
+}
+
+const HeroSection: React.FC<IHeroSection> = ({
+    title,
+    subtitle,
+    heroImage
+}) => {
     return (
         <HeroSectionStyle>
-            <div className="linear-horizontal top-bottom"></div>
-            <div className="linear-horizontal bottom-top"></div>
-            <div className="linear-vertical left-right"></div>
-            <div className="linear-vertical right-left"></div>
-            <img src="/hero-img.png" alt="" />
-            <h1>RAFAEL FISCHER</h1>
-            <h2>
-                Developer, UI/UX Designer, Architect and PhD Student in Civil
-                Engineering
-            </h2>
+            <HeroImage heroImage={heroImage} />
+            <h1>{title}</h1>
+            <h2>{subtitle}</h2>
             <SocialLinksContainer />
         </HeroSectionStyle>
     )
@@ -34,70 +38,6 @@ export const HeroSectionStyle = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    img {
-        z-index: 0;
-        position: absolute;
-        filter: brightness(25%);
-        filter: blur(100%);
-
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-        object-position: 10%;
-    }
-
-    .linear-horizontal {
-        z-index: 1;
-        position: absolute;
-
-        width: 100%;
-        height: 40%;
-    }
-
-    .linear-vertical {
-        z-index: 1;
-        position: absolute;
-
-        width: 50%;
-        height: 100%;
-    }
-
-    .left-right {
-        background: linear-gradient(
-            90deg,
-            ${({ theme }) => theme.colors.dark} 0%,
-            rgba(0, 0, 0, 0) 100%
-        );
-        left: 0;
-    }
-
-    .right-left {
-        background: linear-gradient(
-            270deg,
-            ${({ theme }) => theme.colors.dark} 0%,
-            rgba(0, 0, 0, 0) 100%
-        );
-        right: 0;
-    }
-
-    .top-bottom {
-        background: linear-gradient(
-            180deg,
-            ${({ theme }) => theme.colors.dark} 0%,
-            rgba(0, 0, 0, 0) 100%
-        );
-        top: 0;
-    }
-
-    .bottom-top {
-        background: linear-gradient(
-            0deg,
-            ${({ theme }) => theme.colors.dark} 0%,
-            rgba(0, 0, 0, 0) 100%
-        );
-        bottom: 0;
-    }
 
     h1 {
         z-index: 1;
@@ -129,7 +69,6 @@ export const HeroSectionStyle = styled.section`
 
     .social-links {
         min-width: 100px;
-        width: 20%;
 
         display: flex;
         align-items: center;
