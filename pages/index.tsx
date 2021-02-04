@@ -1,4 +1,4 @@
-import CustomHead from '../src/components/Head'
+import CustomHead from '../src/components/organisms/Head'
 import HeroSection from '../src/components/organisms/HeroSection'
 import OptionsSection from '../src/components/organisms/OptionsSection'
 
