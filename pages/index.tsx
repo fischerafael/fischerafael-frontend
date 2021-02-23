@@ -1,40 +1,35 @@
-import React from 'react'
-import styled from 'styled-components'
+import { GetStaticProps } from 'next'
 
-const Home = () => {
+import { data } from '../src/external/data'
+
+import HeroSection from '../src/external/ui/components/organisms/HeroSection'
+import BioSection from '../src/external/ui/components/organisms/BioSection'
+import { PageContainerStyle } from '../src/external/ui/components/templates/PageStyle'
+
+const Home = ({ data }) => {
+    console.log('userData', data)
+
     return (
         <PageContainerStyle>
-            <TwoColContainerStyle>
-                <img
-                    src="https://avatars.githubusercontent.com/u/47259718?v=4"
-                    alt="Rafael Fischer"
-                />
-                <div>
-                    <h1>Rafael Fischer</h1>
-                    <h2>Desenvolvedor Web & UI/UX Designer</h2>
-                </div>
-            </TwoColContainerStyle>
+            <HeroSection
+                name={data.pt.personal.name}
+                avatar={data.pt.personal.avatar}
+                title={data.pt.personal.title}
+                github={data.pt.links.github}
+                linkedin={data.pt.links.linkedin}
+                blog={data.pt.links.blog}
+            />
+            <BioSection title="Sobre" bio={data.pt.personal.bio} />
         </PageContainerStyle>
     )
 }
 
 export default Home
 
-export const PageContainerStyle = styled.main`
-    background: white;
-    z-index: 0;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    min-height: 100vh;
-`
-export const TwoColContainerStyle = styled.section`
-    max-width: 1200px;
-    width: 90%;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
-`
+export const getStaticProps: GetStaticProps = async (context) => {
+    return {
+        props: {
+            data: data
+        }
+    }
+}
