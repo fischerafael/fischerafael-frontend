@@ -21,29 +21,37 @@ const BioSection = ({ title, experiences }: Props) => {
     return (
         <ProjectSectionContainerStyle>
             <h2>{title}</h2>
-
-            {experiences.map((experience, index) => (
-                <ExperienceContainerStyle key={index}>
-                    <h3>{experience.title}</h3>
-                    <h4>
-                        <span>{experience.institution}</span>,{' '}
-                        {experience.location}
-                    </h4>
-                    <h5>
-                        {experience.startedAt} -{' '}
-                        {experience.finishedAt
-                            ? experience.finishedAt
-                            : 'atualmente'}
-                    </h5>
-                    <p className="exp-description">{experience.description}</p>
-                </ExperienceContainerStyle>
-            ))}
+            <ExperiencesContainerStyle>
+                {experiences.map((experience, index) => (
+                    <ExperienceContainerStyle key={index}>
+                        <h3>{experience.title}</h3>
+                        <h4>
+                            <span>{experience.institution}</span>,{' '}
+                            {experience.location}
+                        </h4>
+                        <h5>
+                            {experience.startedAt} -{' '}
+                            {experience.finishedAt
+                                ? experience.finishedAt
+                                : 'atualmente'}
+                        </h5>
+                        <p className="exp-description">
+                            {experience.description}
+                        </p>
+                    </ExperienceContainerStyle>
+                ))}
+            </ExperiencesContainerStyle>
         </ProjectSectionContainerStyle>
     )
 }
 
 export default BioSection
 
+export const ExperiencesContainerStyle = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+`
 export const ExperienceContainerStyle = styled.div`
     background: #f3f3f3;
     border-radius: 1rem;
@@ -87,6 +95,7 @@ export const ProjectSectionContainerStyle = styled(TwoColContainerStyle)`
     h2 {
         align-self: flex-start;
         font: 900 2rem 'Roboto';
+        margin-bottom: 2rem;
     }
     p {
         align-self: flex-start;
