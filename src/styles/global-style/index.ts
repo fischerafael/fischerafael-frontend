@@ -1,17 +1,13 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
-* {
+  * {
     box-sizing: border-box;
   }
-  body {
+  html, body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;    
-    
-    color: ${({ theme }) => theme.colors.ligth};
-    background: ${({ theme }) => theme.colors.dark};
+    padding: 0;       
 
-    font: 400 14px 'Roboto Slab', serif;
+    font: 400 16px 'Roboto Slab', serif;
   }  
 `
