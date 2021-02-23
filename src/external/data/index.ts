@@ -11,6 +11,18 @@ export const data = {
             github: 'https://github.com/fischerafael',
             linkedin: 'https://www.linkedin.com/in/fischerafael',
             blog: 'https://fischerafael.com'
-        }
+        },
+        professional: [
+            {
+                title: 'Desenvolvedor Web Frontend & Backend',
+                institution: 'Freelancer',
+                startedAt: 2016,
+                finishedAt: null,
+                current: true,
+                location: 'Curitiba, Brasil',
+                description:
+                    'Experiência desenvolvendo aplicações web moderna utilizando tecnologias como Typescript, Javascript, ReactJS, NextJS, NodeJS, Styled-Components, HTML, CSS e Wordpress. Experiência criando clients em ReactJS e NextJS (+ de 30 projetos). Experiência criando servidores API Rest em NodeJS (+ de 15 projetos). Experiência criando blogs em Wordpress. Experiência criando conteúdos para internet, como artigos de blog (+ de 50 artigos e 2 milhões de views), vídeos para o Youtube (+ de 200 vídeos) e podcasts (+ de 100 episódios e 10 mil downloads). Durante o período, foi premiado em 1º lugar durante o evento Imersão React Alura, ao ter o projeto AluraQuiz selecionado entre mais de 1500 concorrentes.'
+            }
+        ]
     }
 }
