@@ -25,6 +25,29 @@ const Home = ({ data }) => {
                 title="Experiências Profissionais"
                 experiences={data.pt.professional}
             />
+            <ExperienceSection
+                title="Educação"
+                experiences={data.pt.education}
+            />
+            <ExperienceSection
+                title="Certificações, Cursos e Bootcamps"
+                experiences={data.pt.certification}
+            />
+            <ExperienceSection
+                title="Tecnologias"
+                experiences={data.pt.techs}
+                single
+            />
+            <ExperienceSection
+                title="Design"
+                experiences={data.pt.design}
+                single
+            />
+            <ExperienceSection
+                title="Idiomas"
+                experiences={data.pt.languages}
+                single
+            />
         </PageContainerStyle>
     )
 }
