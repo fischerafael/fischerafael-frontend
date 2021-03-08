@@ -57,5 +57,5 @@ const MainContainer = styled.div`
     }
 `
 const ContentContainer = styled(FlexContainer)`
-    padding: 0 1rem;
+    padding: 0 2rem;
 `
