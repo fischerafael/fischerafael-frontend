@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FlexContainer } from '../../design-system/molecules/FlexContainer'
+import { FlexContainer } from '../../../design-system/molecules/FlexContainer'
 
 const HeroImage = () => {
     return (

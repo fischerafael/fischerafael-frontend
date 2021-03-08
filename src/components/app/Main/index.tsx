@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { FlexContainer } from '../../design-system/molecules/FlexContainer'
-import HeroImage from '../HeroImage'
+import HeroImage from './HeroImage'
 import Text from '../../design-system/molecules/Text'
 
-const Main = () => {
+const Main = ({ title, subTitle }) => {
     return (
         <MainContainer>
             <ContentContainer
@@ -19,7 +19,7 @@ const Main = () => {
                     as="h1"
                     style={{ fontSize: '5rem', fontWeight: 'bold' }}
                 >
-                    Rafael Fischer
+                    {title}
                 </Text>
                 <Text
                     color="light"
@@ -32,7 +32,7 @@ const Main = () => {
                         lineHeight: '125%'
                     }}
                 >
-                    Desenvolvedor Frontend & UI / UX Designer
+                    {subTitle}
                 </Text>
             </ContentContainer>
             <HeroImage />
