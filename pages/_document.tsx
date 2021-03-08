@@ -35,12 +35,7 @@ export default class MyDocument extends Document {
                     <link rel="shortcut icon" href="/logo-favicon.svg" />
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
                     <link
-                        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700;900&display=swap"
-                        rel="stylesheet"
-                    />
-                    <link rel="preconnect" href="https://fonts.gstatic.com" />
-                    <link
-                        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap"
+                        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap"
                         rel="stylesheet"
                     />
                 </Head>

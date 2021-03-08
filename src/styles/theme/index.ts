@@ -1,6 +1,26 @@
 import { DefaultTheme } from 'styled-components'
 
-export const theme: DefaultTheme = {
+export interface PropsTheme {
+    color: {
+        darker: string
+        dark: string
+        primary: string
+        ligth: string
+        ligther: string
+    }
+}
+
+export const theme = {
+    color: {
+        darker: '#141414',
+        dark: '#333333',
+        primary: '#0192E4',
+        ligth: '#F3F6F8',
+        ligther: '#fff'
+    }
+}
+
+export const themeOld: DefaultTheme = {
     colors: {
         dark: '#1F212B',
         ultraDark: '#15171E',
