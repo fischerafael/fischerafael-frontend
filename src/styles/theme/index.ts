@@ -11,20 +11,22 @@ export interface PropsTheme {
     breakPoints: {
         xl: string
         lg: string
+        md: string
     }
 }
 
 export const theme = {
     color: {
         darker: '#141414',
-        dark: '#333333',
+        dark: '#222222',
         primary: '#35A2D1',
         ligth: '#F3F6F8',
         ligther: '#fff'
     },
     breakPoints: {
         xl: '1024px',
-        lg: '900px'
+        lg: '900px',
+        md: '600px'
     }
 }
 

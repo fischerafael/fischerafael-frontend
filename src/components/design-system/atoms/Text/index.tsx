@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components'
 interface Props {
     children: ReactNode
     as: 'h1' | 'h2' | 'p'
-    variant: 'MainTitle' | 'SubTitle'
+    variant: 'MainTitle' | 'SubTitle' | 'SectionTitle' | 'Paragraph'
     [x: string]: any
 }
 
@@ -22,6 +22,8 @@ export const TextStyle = styled.span<Props>`
     padding: 0 2rem;
     ${(props) => props.variant === 'MainTitle' && MainTitle}
     ${(props) => props.variant === 'SubTitle' && SubTitle}
+    ${(props) => props.variant === 'SectionTitle' && SectionTitle}
+    ${(props) => props.variant === 'Paragraph' && Paragraph}
 `
 const MainTitle = css`
     font-weight: bold;
@@ -38,4 +40,22 @@ const SubTitle = css`
     margin: 1rem 0;
 
     text-align: center;
+`
+
+const SectionTitle = css`
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 125%;
+    padding: 2rem 0;
+
+    text-align: start;
+`
+
+const Paragraph = css`
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 200%;
+    padding: 2rem 0;
+
+    text-align: start;
 `

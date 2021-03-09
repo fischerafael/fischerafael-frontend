@@ -1,52 +1,48 @@
-import { GetStaticProps } from 'next'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import styled from 'styled-components'
 
-import Header from '../src/components/Header'
-import Main from '../src/components/Main'
+import { DefaultPageContainer } from '../src/components/DefautPageContainer'
+import Text from '../src/components/design-system/atoms/Text'
 
-const Home = (props) => {
-    const [data, setData] = useState(props.pt)
-    const [en, setEn] = useState(true)
+import ProfileSection from '../src/components/Templates/Profile'
 
-    useEffect(() => {
-        if (en === true) {
-            setData(props.en)
-            return
-        }
-        setData(props.pt)
-    }, [en])
-
+const home = () => {
     return (
         <>
-            <Header>
-                <li onClick={(e) => setEn((prevState) => !prevState)}>
-                    {en ? 'EN' : 'PT'}
-                </li>
-            </Header>
-            <Main name={data.personal.name} title={data.personal.title} />
+            <ProfileSection page="about" />
+            <DefaultPageContainer>
+                <AboutContent>
+                    <Text as="p" variant="Paragraph">
+                        Desenvolvedor com eperiência na criação de aplicações
+                        web completas, bonitas, rápidas e seguras, utilizando
+                        tecnologias modernas como NextJS, ReactJS, NodeJS,
+                        Typescript e Javascript.
+                    </Text>
+                    <Text as="p" variant="Paragraph">
+                        UI & UX Designer com experiência na concepção de
+                        produtos digitais com enfoque em promover a melhor
+                        experiência para o usuário, e que geram o máximo de
+                        valor possível.
+                    </Text>
+                    <Text as="h1" variant="SectionTitle">
+                        Experiências Profissionais
+                    </Text>
+                </AboutContent>
+            </DefaultPageContainer>
         </>
     )
 }
 
-export default Home
+export default home
 
-const userData = {
-    pt: {
-        personal: {
-            name: 'Rafael Fischer',
-            title: 'Desenvolvedor Frontend & UI / UX Designer'
-        }
-    },
-    en: {
-        personal: {
-            name: 'Rafael Fischer',
-            title: 'Frontend Developer & UI / UX Designer'
-        }
-    }
-}
+export const AboutContent = styled.section`
+    width: 100%;
+    height: 100%;
 
-export const getStaticProps: GetStaticProps = async () => {
-    return {
-        props: userData
+    max-width: ${(props) => props.theme.breakPoints.md};
+    padding: 2rem;
+
+    @media (max-width: 800px) {
+        max-width: 100%;
     }
-}
+`
