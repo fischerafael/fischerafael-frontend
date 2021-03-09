@@ -1,8 +1,54 @@
 import React from 'react'
+import { FaGithub, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa'
 import styled from 'styled-components'
+import Text from '../design-system/atoms/Text'
+import CustomLink from '../design-system/molecules/CustomLink'
+import ProfileAvatarImage from '../design-system/organisms/ProfileAvatarImage'
+import { SocialIconsNav } from '../SocialIconsNav'
 
-const Main = ({ children }) => {
-    return <MainStyle>{children}</MainStyle>
+const Main = ({ name, title }) => {
+    return (
+        <MainStyle>
+            <ProfileMainStyle>
+                <ProfileAvatarImage
+                    src="https://avatars.githubusercontent.com/u/47259718?v=4"
+                    alt="Rafael Fischer"
+                />
+                <Text as="h1" variant="MainTitle">
+                    {name}
+                </Text>
+                <Text as="h2" variant="SubTitle" style={{ margin: '0' }}>
+                    {title}
+                </Text>
+                <SocialIconsNav>
+                    <CustomLink
+                        href="https://github.com/fischerafael"
+                        target="_blank"
+                    >
+                        <FaGithub />
+                    </CustomLink>
+                    <CustomLink
+                        href="https://www.linkedin.com/in/fischerafael/"
+                        target="_blank"
+                    >
+                        <FaLinkedin />
+                    </CustomLink>
+                    <CustomLink
+                        href="https://www.youtube.com/channel/UCz75xXTimMhZkbK__XOM8hQ"
+                        target="_blank"
+                    >
+                        <FaYoutube />
+                    </CustomLink>
+                    <CustomLink
+                        href="https://www.instagram.com/fischerafael/"
+                        target="_blank"
+                    >
+                        <FaInstagram />
+                    </CustomLink>
+                </SocialIconsNav>
+            </ProfileMainStyle>
+        </MainStyle>
+    )
 }
 
 export default Main
@@ -20,4 +66,10 @@ export const MainStyle = styled.main`
         #141414 100%
     );
     z-index: 1;
+`
+export const ProfileMainStyle = styled.section`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 `
