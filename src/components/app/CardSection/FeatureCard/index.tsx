@@ -4,25 +4,25 @@ import { FlexContainer } from '../../../design-system/molecules/FlexContainer'
 import Text from '../../../design-system/molecules/Text'
 
 interface Props {
-    type: 'code' | 'design' | 'content'
+    img: string
     title: string
     description: string
+    tags?: string[]
 }
 
-const FeatureCard = ({ type, title, description }: Props) => {
+const FeatureCard = ({ img, title, description, tags }: Props) => {
     return (
         <FlexContainer
             background="dark"
             direction="column"
-            justify="flex-start"
-            style={{ width: '100%', padding: '3rem' }}
+            style={{ padding: '6rem 2rem' }}
         >
-            <img src={`${type}.svg`} alt="Desenvolvimento" />
+            <img src={`/${img}`} alt="Desenvolvimento" />
             <Text
                 color="light"
                 as="h2"
                 style={{
-                    padding: '3rem 0',
+                    paddingTop: '4rem',
                     fontWeight: '900',
                     fontSize: '1.25rem',
                     textAlign: 'center',
@@ -31,12 +31,11 @@ const FeatureCard = ({ type, title, description }: Props) => {
             >
                 {title}
             </Text>
-            <FlexContainer style={{ height: '20vh', width: '100%' }}>
+            <FlexContainer align="center" style={{ paddingTop: '1rem' }}>
                 <Text
                     color="light"
                     as="h2"
                     style={{
-                        padding: '0 1rem',
                         fontWeight: 'normal',
                         fontSize: '1rem',
                         textAlign: 'center',
@@ -46,6 +45,25 @@ const FeatureCard = ({ type, title, description }: Props) => {
                     {description}
                 </Text>
             </FlexContainer>
+            {tags && (
+                <FlexContainer style={{ flexWrap: 'wrap', marginTop: '2rem' }}>
+                    {tags &&
+                        tags.map((tag) => (
+                            <Text
+                                as="p"
+                                color="light"
+                                style={{
+                                    background: '#141414',
+                                    margin: '.5rem',
+                                    padding: '.75rem',
+                                    fontSize: '.75rem'
+                                }}
+                            >
+                                {tag}
+                            </Text>
+                        ))}
+                </FlexContainer>
+            )}
         </FlexContainer>
     )
 }
