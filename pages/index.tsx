@@ -1,68 +1,75 @@
 import React from 'react'
+import styled from 'styled-components'
+import Text from '../src/components/design-system/atoms/Text'
+import ProfileAvatarImage from '../src/components/design-system/organisms/ProfileAvatarImage'
+import Header from '../src/components/Header'
+import Main from '../src/components/Main'
 
-import CardSection from '../src/components/app/CardSection'
-import FeatureCard from '../src/components/app/CardSection/FeatureCard'
-import Main from '../src/components/app/Main'
-import { FlexContainer } from '../src/components/design-system/molecules/FlexContainer'
-import GridThree from '../src/components/design-system/molecules/GridThree'
-import Text from '../src/components/design-system/molecules/Text'
+import { FaLinkedin, FaGithub, FaInstagram, FaYoutube } from 'react-icons/fa'
+import CustomLink from '../src/components/design-system/molecules/CustomLink'
 
 const Home = () => {
     return (
         <>
-            <Main
-                title="Rafael Fischer"
-                subTitle="Desenvolvedor Frontend & UI / UX Designer"
-            />
-            <CardSection>
-                <FeatureCard
-                    img="code.svg"
-                    title="DESENVOLVIMENTO WEB"
-                    description="Aplicações web modernas, leves e rápidas utilizando ReactJS, NextJS, NodeJS e Typescript / Javascript."
-                />
-                <FeatureCard
-                    img="design.svg"
-                    title="UI & UX DESIGN"
-                    description="Criação de wireframes, protótipos e interfaces bonitas e pensadas na experiência do usuário."
-                />
-                <FeatureCard
-                    img="content.svg"
-                    title="PRODUÇÃO DE CONTEÚDO"
-                    description="Criação e edição de conteúdos para internet como vídeos (youtube), áudio (podcasts) e textos (blog)."
-                />
-            </CardSection>
-            <FlexContainer
-                as="section"
-                background="darker"
-                justify="flex-start"
-                style={{ height: '30vh', padding: '2rem' }}
-            >
-                <Text
-                    as="h2"
-                    color="light"
-                    style={{ fontSize: '2rem', fontWeight: 'bold' }}
-                >
-                    Últimos Projetos
-                </Text>
-            </FlexContainer>
-            <FlexContainer background="darker">
-                <GridThree>
-                    <FeatureCard
-                        tags={[
-                            'React',
-                            'NextJS',
-                            'Frontend',
-                            'UI & UX',
-                            'Design'
-                        ]}
-                        img="project-logos/fischerafael.svg"
-                        title="Fischerafael"
-                        description="Site pessoal."
+            <Header>
+                <li>EN</li>
+            </Header>
+            <Main>
+                <ProfileMainStyle>
+                    <ProfileAvatarImage
+                        src="https://avatars.githubusercontent.com/u/47259718?v=4"
+                        alt="Rafael Fischer"
                     />
-                </GridThree>
-            </FlexContainer>
+                    <Text as="h1" variant="MainTitle">
+                        Rafael Fischer
+                    </Text>
+                    <Text as="h2" variant="SubTitle" style={{ margin: '0' }}>
+                        Desenvolvedor Frontend & UI / UX Designer
+                    </Text>
+                    <SocialIconsNav>
+                        <CustomLink
+                            href="https://github.com/fischerafael"
+                            target="_blank"
+                        >
+                            <FaGithub />
+                        </CustomLink>
+                        <CustomLink
+                            href="https://www.linkedin.com/in/fischerafael/"
+                            target="_blank"
+                        >
+                            <FaLinkedin />
+                        </CustomLink>
+                        <CustomLink
+                            href="https://www.youtube.com/channel/UCz75xXTimMhZkbK__XOM8hQ"
+                            target="_blank"
+                        >
+                            <FaYoutube />
+                        </CustomLink>
+                        <CustomLink
+                            href="https://www.instagram.com/fischerafael/"
+                            target="_blank"
+                        >
+                            <FaInstagram />
+                        </CustomLink>
+                    </SocialIconsNav>
+                </ProfileMainStyle>
+            </Main>
         </>
     )
 }
 
 export default Home
+
+export const ProfileMainStyle = styled.section`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`
+
+export const SocialIconsNav = styled.nav`
+    margin: 2rem 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+`

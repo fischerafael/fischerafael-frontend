@@ -7,16 +7,31 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0; 
   }
   html, body {         
-    font: 400 16px 'Poppins', sans-serif;    
-  }  
-  h1, h2, h3, h4, h5, h6, p, a, span {
-    margin: 0;
-    padding: 0;   
-    color: #333; 
-    font: inherit;
-    line-height: 100%;
-    font-style: normal;
-    
+    font: 400 16px 'Poppins', sans-serif;
+    color: white;    
   } 
-  
+
+  @media (max-width: 1024px) {
+    html {
+      font-size: 95%;
+    }    
+  }
+
+  @media (max-width: 800px) {
+    html {
+      font-size: 90%;
+    }    
+  }
+
+  @media (max-width: 600px) {
+    html {
+      font-size: 85%;
+    }    
+  }
+
+  @media (max-width: 480px) {
+    html {
+      font-size: 80%;
+    }    
+  }
 `
