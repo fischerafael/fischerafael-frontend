@@ -1,7 +1,6 @@
 import React from 'react'
 import { FaGithub, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa'
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
 import Text from '../design-system/atoms/Text'
 import CustomLink from '../design-system/molecules/CustomLink'
 import ProfileAvatarImage from '../design-system/organisms/ProfileAvatarImage'
@@ -15,7 +14,7 @@ interface Props {
 
 const Main = ({ isOpen, name, title }: Props) => {
     return (
-        <MainStyle animate={isOpen ? 'visible' : 'hidden'}>
+        <MainStyle>
             <ProfileMainStyle>
                 <ProfileAvatarImage
                     src="https://avatars.githubusercontent.com/u/47259718?v=4"
@@ -60,18 +59,7 @@ const Main = ({ isOpen, name, title }: Props) => {
 
 export default Main
 
-export const MainStyle = styled(motion.div).attrs(() => ({
-    initial: 'hidden',
-    variants: {
-        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-        hidden: {
-            opacity: 0,
-            display: 'none',
-            y: -1000,
-            transition: { duration: 0.5 }
-        }
-    }
-}))`
+export const MainStyle = styled.div`
     position: relative;
     display: flex;
     align-items: center;

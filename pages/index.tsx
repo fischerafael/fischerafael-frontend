@@ -7,26 +7,9 @@ import Text from '../src/components/design-system/atoms/Text'
 import ProfileSection from '../src/components/Templates/Profile'
 
 const home = () => {
-    const [isOpen, setIsOpen] = useState<boolean>(false)
-
-    function handleOpenProfile(e: Event) {
-        e.preventDefault()
-        setIsOpen(true)
-    }
-
-    function handleCloseProfile(e: Event) {
-        e.preventDefault()
-        setIsOpen(false)
-    }
-
     return (
         <>
-            <ProfileSection
-                isOpen={isOpen}
-                onClose={handleCloseProfile}
-                onOpen={handleOpenProfile}
-                page="about"
-            />
+            <ProfileSection page="about" />
             <DefaultPageContainer>
                 <AboutContent>
                     <Text as="p" variant="Paragraph">
