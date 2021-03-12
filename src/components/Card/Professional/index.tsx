@@ -1,22 +1,30 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const ProfessionalCard = ({ children }) => {
+const ProfessionalCard = ({
+    index,
+    title,
+    company,
+    location,
+    started,
+    finished,
+    current,
+    description
+}) => {
     return (
         <ProCardContainer>
             <div className="img-number">
-                <span>{children}</span>
+                <span>{index}</span>
             </div>
             <div className="content">
-                <h1>Desenvolvedor</h1>
-                <h2>Design Fischer, Curitiba, Brasil</h2>
-                <h2 className="period">2019 - atualmente</h2>
-                <p>
-                    Em dúvida sobre como utilizar React e seus Hooks? Confira
-                    esse tutorial. Em dúvida sobre como utilizar React e seus
-                    Hooks? Confira esse tutorial. Em dúvida sobre como utilizar
-                    React e seus Hooks? Confira esse tutorial.
-                </p>
+                <h1>{title}</h1>
+                <h2>
+                    {company}, {location}
+                </h2>
+                <h2 className="period">
+                    {started} - {current ? 'atualmente' : finished}
+                </h2>
+                <p>{description}</p>
             </div>
         </ProCardContainer>
     )
@@ -25,9 +33,12 @@ const ProfessionalCard = ({ children }) => {
 export default ProfessionalCard
 
 export const ProCardContainer = styled.article`
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
+    grid-template-columns: 1fr 4fr;
+    gap: 1rem;
+
     padding: 2rem 0;
     border-top: solid 0.1rem ${(props) => props.theme.color.dark};
     width: 100%;
@@ -74,7 +85,7 @@ export const ProCardContainer = styled.article`
     }
 
     @media (max-width: ${(props) => props.theme.breakPoints.md}) {
-        flex-direction: column;
+        grid-template-columns: 1fr;
 
         .content {
             h1 {

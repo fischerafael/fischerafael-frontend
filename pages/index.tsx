@@ -6,10 +6,13 @@ import { DefaultPageContainer } from '../src/components/DefautPageContainer'
 import Text from '../src/components/design-system/atoms/Text'
 
 import ProfileSection from '../src/components/Templates/Profile'
+
 import { LanguageContext } from '../src/contexts/LanguageContext'
+import useData from '../src/hooks/useData'
 
 const home = () => {
     const { language } = useContext(LanguageContext)
+    const { data } = useData()
 
     return (
         <>
@@ -17,16 +20,7 @@ const home = () => {
             <DefaultPageContainer>
                 <AboutContent>
                     <Text as="p" variant="Paragraph">
-                        Desenvolvedor com eperiência na criação de aplicações
-                        web completas, bonitas, rápidas e seguras, utilizando
-                        tecnologias modernas como NextJS, ReactJS, NodeJS,
-                        Typescript e Javascript.
-                    </Text>
-                    <Text as="p" variant="Paragraph">
-                        UI & UX Designer com experiência na concepção de
-                        produtos digitais com enfoque em promover a melhor
-                        experiência para o usuário, e que geram o máximo de
-                        valor possível.
+                        {data.experience.coverLetter}
                     </Text>
                     <Text as="h1" variant="SectionTitle">
                         {language === 'portuguese' &&
@@ -34,8 +28,19 @@ const home = () => {
                         {language === 'english' && 'Professional Experiences'}
                     </Text>
                     <div>
-                        <ProfessionalCard>01</ProfessionalCard>
-                        <ProfessionalCard>01</ProfessionalCard>
+                        {data.experience.professional.map((exp) => (
+                            <ProfessionalCard
+                                key={exp.id}
+                                index={exp.id}
+                                title={exp.title}
+                                company={exp.company}
+                                location={exp.location}
+                                started={exp.started}
+                                finished={exp.finished}
+                                current={exp.current}
+                                description={exp.description}
+                            />
+                        ))}
                     </div>
                 </AboutContent>
             </DefaultPageContainer>

@@ -11,6 +11,8 @@ import NavSection from '../../NavSection'
 import { FaPlus, FaMinus } from 'react-icons/fa'
 import { LanguageContext } from '../../../contexts/LanguageContext'
 
+import { DataContext } from '../../../contexts/DataContext'
+
 interface Props {
     page: 'contact' | 'projects' | 'about'
 }
@@ -22,6 +24,7 @@ const ProfileSection = ({ page }: Props) => {
     const { language, handleSetEnglish, handleSetPortuguese } = useContext(
         LanguageContext
     )
+    const { portuguese } = useContext(DataContext)
 
     return (
         <>
@@ -39,8 +42,8 @@ const ProfileSection = ({ page }: Props) => {
 
             {isOpen && (
                 <Main
-                    name="Rafael Fischer"
-                    title="Desenvolvedor Frontend & UI / UX Designer"
+                    name={portuguese.personal.name}
+                    title={portuguese.personal.bio}
                 />
             )}
 

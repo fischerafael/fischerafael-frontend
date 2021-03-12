@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components'
 import Head from 'next/head'
 import { ProfileProvider } from '../src/contexts/ProfileContext'
 import { LanguageProvider } from '../src/contexts/LanguageContext'
+import { DataProvider } from '../src/contexts/DataContext'
 
 export default function App({ Component, pageProps }) {
     return (
@@ -15,9 +16,11 @@ export default function App({ Component, pageProps }) {
                 </Head>
                 <GlobalStyle />
                 <LanguageProvider>
-                    <ProfileProvider>
-                        <Component {...pageProps} />
-                    </ProfileProvider>
+                    <DataProvider>
+                        <ProfileProvider>
+                            <Component {...pageProps} />
+                        </ProfileProvider>
+                    </DataProvider>
                 </LanguageProvider>
             </ThemeProvider>
         </>

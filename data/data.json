@@ -1,0 +1,104 @@
+{
+    "portuguese": {
+        "personal": {
+            "name": "Rafael Fischer",
+            "bio": "Desenvolvedor Frontend & UI / UX Designer",
+            "links": {
+                "linkedin": {
+                    "img": "/links/linkedin.svg",
+                    "url": "https://www.linkedin.com/in/fischerafael/"
+                },
+                "github": {
+                    "img": "/links/github.svg",
+                    "url": "https://github.com/fischerafael/"
+                },
+                "youtube": {
+                    "img": "Youtube",
+                    "url": "/links/youtube.svg"
+                },
+                "instagram": {
+                    "img": "/links/instagram.svg",
+                    "url": "https://www.instagram.com/fischerafael/"
+                }
+            }
+        },
+        "experience": {
+            "coverLetter": "Desenvolvedor com experiência na criação de aplicações web completas, bonitas, rápidas e seguras, utilizando tecnologias modernas como NextJS, ReactJS, NodeJS, Typescript e Javascript. UI & UX Designer com experiência na concepção de produtos digitais com enfoque em promover a melhor experiência para o usuário, e que geram o máximo de valor possível.",
+            "professional": [
+                {
+                    "id": 1,
+                    "img": "/exp/pro/fischerafael.svg",
+                    "title": "Desenvolvedor Frontend / Backend, UI / UX Designer & Produtor de conteúdo",
+                    "company": "Fischerafael.com",
+                    "location": "Curitiba, Brasil",
+                    "started": 2016,
+                    "finished": null,
+                    "current": true,
+                    "description": "Desenvolvedor, designer e produtor de conteúdo para internet. Experiência desenvolvendo aplicações como freelancer, para projetos pessoais e para projetos acadêmicos. Experiência com tecnologias e soluções frontend como ReactJS, NextJS, Typescript, Javascript, React Hooks, Context API, Styled-Components, SASS, Storybook, Framer Motion, Design Systems, HTML, CSS3, fetchAPI, Axios, dentre outras. Experiência com tecnologias e soluções backend como NodeJS, Typescript, Javascript, MongoDB, Postgres, Apollo Server, API's REST, Express, Clean Architecture, Princípios SOLID, Clean Code, MVC, Jest, BrainJS (biblioteca de rede neural - machine learning) dentre outras. Mais de 100 projetos desenvolvidos e publicados no Github. Experiência criando interfaces (UI Design), wireframes, mockups e protótipos de baixa, média e alta fidelidade (UX Design) utilizando Figma, Illustrator, Photoshop, Indesign, dentre outros softwares. Experiência produzindo conteúdo relacionado ao desenvolvimento web e UI / UX Design (mais de 300 vídeos de tutoriais publicados no Youtube)"
+                },
+                {
+                    "id": 2,
+                    "img": "/exp/pro/ufpr.svg",
+                    "title": "Professor Universitário Substituto",
+                    "company": "Universidade Federal do Paraná",
+                    "location": "Curitiba, Brasil",
+                    "started": 2019,
+                    "finished": null,
+                    "current": true,
+                    "description": "Professor substituto no departamento de Expressão Gráfica da Universidade Federal do Paraná. Experiência ensinando modelagem 3d, BIM (Revit), desenho 2d (Autocad) e desenho técnico para mais de 300 alunos dos cursos de Engenharia de Produção, Elétrica, Química, Agronômica, Industrial Madeireira e Expressão Gráfica. Experiência concebendo, produzindo e gravando disciplinas online de modelagem 3d e desenho 2d no contexto da COVID-19."
+                }
+            ]
+        }
+    },
+    "english": {
+        "personal": {
+            "name": "Rafael Fischer",
+            "bio": "Desenvolvedor Frontend & UI / UX Designer",
+            "links": {
+                "linkedin": {
+                    "img": "/links/linkedin.svg",
+                    "url": "https://www.linkedin.com/in/fischerafael/"
+                },
+                "github": {
+                    "img": "/links/github.svg",
+                    "url": "https://github.com/fischerafael/"
+                },
+                "youtube": {
+                    "img": "Youtube",
+                    "url": "/links/youtube.svg"
+                },
+                "instagram": {
+                    "img": "/links/instagram.svg",
+                    "url": "https://www.instagram.com/fischerafael/"
+                }
+            }
+        },
+        "experience": {
+            "coverLetter": "Desenvolvedor com experiência na criação de aplicações web completas, bonitas, rápidas e seguras, utilizando tecnologias modernas como NextJS, ReactJS, NodeJS, Typescript e Javascript. UI & UX Designer com experiência na concepção de produtos digitais com enfoque em promover a melhor experiência para o usuário, e que geram o máximo de valor possível.",
+            "professional": [
+                {
+                    "id": 1,
+                    "img": "/exp/pro/fischerafael.svg",
+                    "title": "Desenvolvedor Frontend / Backend, UI / UX Designer & Produtor de conteúdo",
+                    "company": "Fischerafael.com",
+                    "location": "Curitiba, Brasil",
+                    "started": 2016,
+                    "finished": null,
+                    "current": true,
+                    "description": "Desenvolvedor, designer e produtor de conteúdo para internet. Experiência desenvolvendo aplicações como freelancer, para projetos pessoais e para projetos acadêmicos. Experiência com tecnologias e soluções frontend como ReactJS, NextJS, Typescript, Javascript, React Hooks, Context API, Styled-Components, SASS, Storybook, Framer Motion, Design Systems, HTML, CSS3, fetchAPI, Axios, dentre outras. Experiência com tecnologias e soluções backend como NodeJS, Typescript, Javascript, MongoDB, Postgres, Apollo Server, API's REST, Express, Clean Architecture, Princípios SOLID, Clean Code, MVC, Jest, BrainJS (biblioteca de rede neural - machine learning) dentre outras. Mais de 100 projetos desenvolvidos e publicados no Github. Experiência criando interfaces (UI Design), wireframes, mockups e protótipos de baixa, média e alta fidelidade (UX Design) utilizando Figma, Illustrator, Photoshop, Indesign, dentre outros softwares. Experiência produzindo conteúdo relacionado ao desenvolvimento web e UI / UX Design (mais de 300 vídeos de tutoriais publicados no Youtube)"
+                },
+                {
+                    "id": 2,
+                    "img": "/exp/pro/ufpr.svg",
+                    "title": "Professor Universitário Substituto",
+                    "company": "Universidade Federal do Paraná",
+                    "location": "Curitiba, Brasil",
+                    "started": 2019,
+                    "finished": null,
+                    "current": true,
+                    "description": "Professor substituto no departamento de Expressão Gráfica da Universidade Federal do Paraná. Experiência ensinando modelagem 3d, BIM (Revit), desenho 2d (Autocad) e desenho técnico para mais de 300 alunos dos cursos de Engenharia de Produção, Elétrica, Química, Agronômica, Industrial Madeireira e Expressão Gráfica. Experiência concebendo, produzindo e gravando disciplinas online de modelagem 3d e desenho 2d no contexto da COVID-19."
+                }
+            ]
+        }
+    }
+}
