@@ -1,12 +1,16 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import ProfessionalCard from '../src/components/Card/Professional'
 
 import { DefaultPageContainer } from '../src/components/DefautPageContainer'
 import Text from '../src/components/design-system/atoms/Text'
 
 import ProfileSection from '../src/components/Templates/Profile'
+import { LanguageContext } from '../src/contexts/LanguageContext'
 
 const home = () => {
+    const { language } = useContext(LanguageContext)
+
     return (
         <>
             <ProfileSection page="about" />
@@ -25,8 +29,14 @@ const home = () => {
                         valor possível.
                     </Text>
                     <Text as="h1" variant="SectionTitle">
-                        Experiências Profissionais
+                        {language === 'portuguese' &&
+                            'Experiências Profissionais'}
+                        {language === 'english' && 'Professional Experiences'}
                     </Text>
+                    <div>
+                        <ProfessionalCard>01</ProfessionalCard>
+                        <ProfessionalCard>01</ProfessionalCard>
+                    </div>
                 </AboutContent>
             </DefaultPageContainer>
         </>

@@ -6,7 +6,7 @@ import ProfileSection from '../../src/components/Templates/Profile'
 const about = () => {
     return (
         <>
-            <ProfileSection page="blog" />
+            <ProfileSection page="contact" />
             <DefaultPageContainer>
                 <Text
                     as="h1"

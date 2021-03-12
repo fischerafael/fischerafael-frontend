@@ -40,8 +40,11 @@ const HeaderStyle = styled.header`
 
         nav {
             display: flex;
+            align-items: center;
+            justify-content: space-between;
             list-style: none;
             gap: 2rem;
+            cursor: pointer;
         }
     }
 `
