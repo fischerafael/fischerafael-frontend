@@ -7,18 +7,27 @@ import NavSection from '../../NavSection'
 
 interface Props {
     page: 'blog' | 'projects' | 'about'
+    isOpen: boolean
+    onClose: (e: any) => void
+    onOpen: (e: any) => void
 }
 
-const ProfileSection = ({ page }: Props) => {
+const ProfileSection = ({ page, isOpen, onClose, onOpen }: Props) => {
     return (
         <>
             <Header>
-                <li>EN</li>
+                {!isOpen && <NavLink onClick={onOpen}>Abrir</NavLink>}
+                {isOpen && <NavLink onClick={onClose}>Fechar</NavLink>}
+
+                <NavLink>EN</NavLink>
             </Header>
+
             <Main
+                isOpen={isOpen}
                 name="Rafael Fischer"
                 title="Desenvolvedor Frontend & UI / UX Designer"
             />
+
             <NavSection>
                 <CustomLink href="/">
                     <NavLink isActive={page === 'about' && true}>Sobre</NavLink>
@@ -53,7 +62,7 @@ const NavLink = styled.li<NavLinkProps>`
     transition: 1s;
 
     &:hover {
-        background: ${(props) => props.theme.color.dark};
+        color: ${(props) => props.theme.color.dark};
     }
 
     ${(props) =>

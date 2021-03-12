@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
   html, body {         
     font: 400 16px 'Poppins', sans-serif;
     color: white;    
+    background: #141414;
   } 
 
   @media (max-width: 1024px) {

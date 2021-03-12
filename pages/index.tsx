@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import { DefaultPageContainer } from '../src/components/DefautPageContainer'
@@ -7,9 +7,26 @@ import Text from '../src/components/design-system/atoms/Text'
 import ProfileSection from '../src/components/Templates/Profile'
 
 const home = () => {
+    const [isOpen, setIsOpen] = useState<boolean>(false)
+
+    function handleOpenProfile(e: Event) {
+        e.preventDefault()
+        setIsOpen(true)
+    }
+
+    function handleCloseProfile(e: Event) {
+        e.preventDefault()
+        setIsOpen(false)
+    }
+
     return (
         <>
-            <ProfileSection page="about" />
+            <ProfileSection
+                isOpen={isOpen}
+                onClose={handleCloseProfile}
+                onOpen={handleOpenProfile}
+                page="about"
+            />
             <DefaultPageContainer>
                 <AboutContent>
                     <Text as="p" variant="Paragraph">

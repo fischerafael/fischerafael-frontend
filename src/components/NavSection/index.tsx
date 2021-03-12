@@ -21,6 +21,7 @@ export const NavSectionStyle = styled.section`
     background: ${(props) => props.theme.color.darker};
 
     padding: 2rem;
+    padding-top: 20vh;
     z-index: 10;
 
     list-style: none;
