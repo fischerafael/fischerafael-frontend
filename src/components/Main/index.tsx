@@ -9,10 +9,9 @@ import { SocialIconsNav } from '../SocialIconsNav'
 interface Props {
     name: string
     title: string
-    isOpen: boolean
 }
 
-const Main = ({ isOpen, name, title }: Props) => {
+const Main = ({ name, title }: Props) => {
     return (
         <MainStyle>
             <ProfileMainStyle>
