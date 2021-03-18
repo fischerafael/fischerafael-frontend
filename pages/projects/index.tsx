@@ -1,21 +1,21 @@
 import React from 'react'
-import { DefaultPageContainer } from '../../src/components/DefautPageContainer'
-import Text from '../../src/components/design-system/atoms/Text'
-import ProfileSection from '../../src/components/Templates/Profile'
+
+import useProfile from '../../src/hooks/useProfile'
+
+import Header from '../../src/external/ui/components/organisms/Header'
+import Navigation from '../../src/external/ui/components/organisms/Navigation'
+import Profile from '../../src/external/ui/components/organisms/Profile'
+import Projects from '../../src/external/ui/components/organisms/Projects'
 
 const projects = () => {
+    const { isOpen } = useProfile()
+
     return (
         <>
-            <ProfileSection page="projects" />
-            <DefaultPageContainer>
-                <Text
-                    as="h1"
-                    variant="SectionTitle"
-                    style={{ paddingTop: '4rem' }}
-                >
-                    Página em construção!
-                </Text>
-            </DefaultPageContainer>
+            <Header />
+            {isOpen && <Profile />}
+            <Navigation currentPage="projects" />
+            <Projects />
         </>
     )
 }

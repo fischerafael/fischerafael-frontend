@@ -16,7 +16,9 @@ export const NavSectionStyle = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     width: 100%;
+
     height: 15vh;
     background: ${(props) => props.theme.color.darker};
 

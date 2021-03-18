@@ -4,49 +4,19 @@ import { ProfileContext } from '../../../contexts/ProfileContext'
 
 import CustomLink from '../../design-system/molecules/CustomLink'
 
-import Header from '../../Header'
-import Main from '../../Main'
 import NavSection from '../../NavSection'
 
-import { FaPlus, FaMinus } from 'react-icons/fa'
 import { LanguageContext } from '../../../contexts/LanguageContext'
-
-import { DataContext } from '../../../contexts/DataContext'
 
 interface Props {
     page: 'contact' | 'projects' | 'about'
 }
 
 const ProfileSection = ({ page }: Props) => {
-    const { isOpen, handleCloseProfile, handleOpenProfile } = useContext(
-        ProfileContext
-    )
-    const { language, handleSetEnglish, handleSetPortuguese } = useContext(
-        LanguageContext
-    )
-    const { portuguese } = useContext(DataContext)
+    const { language } = useContext(LanguageContext)
 
     return (
         <>
-            <Header>
-                {!isOpen && <FaPlus onClick={handleOpenProfile} />}
-                {isOpen && <FaMinus onClick={handleCloseProfile} />}
-
-                {language === 'english' && (
-                    <NavLink onClick={handleSetPortuguese}>PT</NavLink>
-                )}
-                {language === 'portuguese' && (
-                    <NavLink onClick={handleSetEnglish}>EN</NavLink>
-                )}
-            </Header>
-
-            {isOpen && (
-                <Main
-                    name={portuguese.personal.name}
-                    title={portuguese.personal.bio}
-                />
-            )}
-
             <NavSection>
                 <CustomLink href="/">
                     <NavLink isActive={page === 'about' && true}>

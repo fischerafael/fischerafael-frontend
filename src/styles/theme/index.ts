@@ -12,6 +12,7 @@ export interface PropsTheme {
         xl: string
         lg: string
         md: string
+        sm: string
     }
 }
 
@@ -26,7 +27,8 @@ export const theme = {
     breakPoints: {
         xl: '1024px',
         lg: '900px',
-        md: '600px'
+        md: '600px',
+        sm: '480px'
     }
 }
 

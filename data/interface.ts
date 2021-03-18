@@ -26,6 +26,7 @@ interface IInfo {
             }
         }
     }
+    projects: IProject[]
     experience: {
         coverLetter: string
         professional: IProExp[]
@@ -41,5 +42,12 @@ interface IProExp {
     started: number
     finished: number
     current: boolean
+    description: string
+}
+
+interface IProject {
+    id: number
+    image: string
+    title: string
     description: string
 }
