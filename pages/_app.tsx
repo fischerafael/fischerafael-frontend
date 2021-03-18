@@ -13,6 +13,7 @@ export default function App({ Component, pageProps }) {
             <ThemeProvider theme={theme}>
                 <Head>
                     <title>Rafael Fischer</title>
+                    <link rel="shortcut icon" href="fischerafael-icon.svg" />
                 </Head>
                 <GlobalStyle />
                 <LanguageProvider>

@@ -8,6 +8,7 @@ import ProfessionalCard from '../../../../../components/Card/Professional'
 import Text from '../../../../../components/design-system/atoms/Text'
 
 import { FlexContainer } from '../../_design-system/templates/FlexContainer'
+import Link from 'next/link'
 
 const About = () => {
     const { data } = useData()
@@ -27,9 +28,22 @@ const About = () => {
                 <Text as="p" variant="Paragraph">
                     {coverLetter}
                 </Text>
+                <Link href="/cv-rafael.pdf">
+                    <a
+                        style={{
+                            textDecoration: 'none',
+                            color: '#35A2D1',
+                            textAlign: 'center'
+                        }}
+                        target="_blank"
+                    >
+                        Baixar CV
+                    </a>
+                </Link>
                 <Text as="h2" variant="SectionTitle">
                     Habilidades
                 </Text>
+
                 <SkillSection as="section">
                     {skills.map((skill) => (
                         <p>{skill}</p>
