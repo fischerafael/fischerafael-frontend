@@ -19,6 +19,7 @@ const About = () => {
     const coverLetter = data.experience.coverLetter
     const skills = data.experience.skills
     const professionalExperiences = data.experience.professional
+    const educationExperiences = data.experience.education
 
     return (
         <FlexContainer as="section">
@@ -34,11 +35,29 @@ const About = () => {
                         <p>{skill}</p>
                     ))}
                 </SkillSection>
-                <Text as="h2" variant="SectionTitle">
+                <Text as="h1" variant="SectionTitle">
                     Experiências Profissionais
                 </Text>
                 <div>
                     {professionalExperiences.map((exp) => (
+                        <ProfessionalCard
+                            key={exp.id}
+                            index={exp.id}
+                            title={exp.title}
+                            company={exp.company}
+                            location={exp.location}
+                            started={exp.started}
+                            finished={exp.finished}
+                            current={exp.current}
+                            description={exp.description}
+                        />
+                    ))}
+                </div>
+                <Text as="h1" variant="SectionTitle">
+                    Educação
+                </Text>
+                <div>
+                    {educationExperiences.map((exp) => (
                         <ProfessionalCard
                             key={exp.id}
                             index={exp.id}

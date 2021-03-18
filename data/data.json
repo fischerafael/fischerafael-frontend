@@ -245,6 +245,76 @@
                     "current": false,
                     "description": "Experiência com a concepção e representação de projetos arquitetônicos. Participação na concepção e representação gráfica do projeto da Nova Estação Antártica do Brasil (Estação Comandante Ferraz). Experiência com detalhamento o detalhamento arquitetônico da sede da Fecomércio, em Porto Alegre."
                 }
+            ],
+            "education": [
+                {
+                    "id": 1,
+                    "img": "/exp/pro/ufpr.svg",
+                    "title": "Doutorado em Engenharia",
+                    "company": "Universidade Federal do Paraná",
+                    "location": "Curitiba, Brasil",
+                    "started": 2018,
+                    "finished": null,
+                    "current": true,
+                    "description": "Experiência desenvolvendo aplicação que utiliza inteligência artificial para auxiliar no processo de projeto de arquitetura centrado na experiência do usuário, com ReactJS, NodeJS, NextJS e Typescript."
+                },
+                {
+                    "id": 2,
+                    "img": "/exp/pro/ufpr.svg",
+                    "title": "Mestrado em Engenharia",
+                    "company": "Universidade Federal do Paraná",
+                    "location": "Curitiba, Brasil",
+                    "started": 2015,
+                    "finished": 2017,
+                    "current": false,
+                    "description": "Experiência com análise de dados, projeto de experimentos e método científico."
+                },
+                {
+                    "id": 3,
+                    "img": "/exp/pro/ufpr.svg",
+                    "title": "Graduação em Análise e Desenvolvimento de Sistemas (interrompida)",
+                    "company": "PUC-PR",
+                    "location": "Curitiba, Brasil",
+                    "started": 2018,
+                    "finished": 2020,
+                    "current": false,
+                    "description": "Experiência com projetos acadêmicos em linguagens como Python, PHP e Java."
+                },
+                {
+                    "id": 4,
+                    "img": "/exp/pro/ufpr.svg",
+                    "title": "Graduação em Arquitetura e Urbanismo",
+                    "company": "Universidade Federal do Paraná",
+                    "location": "Curitiba, Brasil",
+                    "started": 2009,
+                    "finished": 2015,
+                    "current": false,
+                    "description": "Graduação com laura acadêmica. Participação em intercâmbio acadêmico (Ciências sem Fronteiras) na Bélgica, entre 2013 e 2014. Experiência em todas as áreas da arquitetura e urbanismo. Participação de diversos concuros de projeto para estudantes, sendo premiado em 3ª lugar no IV Concurso CBCA para Estudantes de Arquitetura, em 2012."
+                },
+
+                {
+                    "id": 5,
+                    "img": "/exp/pro/ufpr.svg",
+                    "title": "Graduação em Design de Produto (interrompida)",
+                    "company": "Universidade Federal do Paraná",
+                    "location": "Curitiba, Brasil",
+                    "started": 2008,
+                    "finished": 2008,
+                    "current": false,
+                    "description": "Experiência com métodos de desenvolvimento e design de produto."
+                },
+
+                {
+                    "id": 6,
+                    "img": "/exp/pro/ufpr.svg",
+                    "title": "Curso Técnico em Processamento de Dados",
+                    "company": "OPET",
+                    "location": "Curitiba, Brasil",
+                    "started": 2005,
+                    "finished": 2007,
+                    "current": false,
+                    "description": "Experiência com projetos em linguagens como Visual Basic, Delphi e Pascal."
+                }
             ]
         }
     },
@@ -447,6 +517,19 @@
                     "finished": null,
                     "current": true,
                     "description": "Professor substituto no departamento de Expressão Gráfica da Universidade Federal do Paraná. Experiência ensinando modelagem 3d, BIM (Revit), desenho 2d (Autocad) e desenho técnico para mais de 300 alunos dos cursos de Engenharia de Produção, Elétrica, Química, Agronômica, Industrial Madeireira e Expressão Gráfica. Experiência concebendo, produzindo e gravando disciplinas online de modelagem 3d e desenho 2d no contexto da COVID-19."
+                }
+            ],
+            "education": [
+                {
+                    "id": 1,
+                    "img": "/exp/pro/ufpr.svg",
+                    "title": "Doutorando",
+                    "company": "Universidade Federal do Paraná",
+                    "location": "Curitiba, Brasil",
+                    "started": 2018,
+                    "finished": null,
+                    "current": false,
+                    "description": "Experiência desenvolvendo aplicação que utiliza inteligência artificial para auxiliar no processo de projeto de arquitetura centrado na experiência do usuário, com ReactJS, NodeJS, NextJS e Typescript."
                 }
             ]
         }

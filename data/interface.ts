@@ -31,6 +31,7 @@ interface IInfo {
         coverLetter: string
         skills: string[]
         professional: IProExp[]
+        education: IProExp[]
     }
 }
 

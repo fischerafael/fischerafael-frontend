@@ -22,21 +22,20 @@ const Navigation = ({ currentPage }: Props) => {
                     paddingTop: '15vh'
                 }}
             >
-                <Link href="/projects">
-                    <NavLink
-                        isActive={currentPage === 'projects' && true}
-                        style={{ width: '100%' }}
-                    >
-                        <a style={{ textDecoration: 'none' }}>Projetos</a>
-                    </NavLink>
-                </Link>
-
                 <Link href="/">
                     <NavLink
                         isActive={currentPage === 'about' && true}
                         style={{ width: '100%' }}
                     >
                         <a style={{ textDecoration: 'none' }}>Sobre</a>
+                    </NavLink>
+                </Link>
+                <Link href="/projects">
+                    <NavLink
+                        isActive={currentPage === 'projects' && true}
+                        style={{ width: '100%' }}
+                    >
+                        <a style={{ textDecoration: 'none' }}>Projetos</a>
                     </NavLink>
                 </Link>
             </MediumFlexContainer>
