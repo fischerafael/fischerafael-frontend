@@ -29,6 +29,7 @@ interface IInfo {
     projects: IProject[]
     experience: {
         coverLetter: string
+        skills: string[]
         professional: IProExp[]
     }
 }

@@ -16,18 +16,29 @@ const About = () => {
     const isPortuguese = language === 'portuguese'
     const isEnglish = language === 'english'
 
+    const coverLetter = data.experience.coverLetter
+    const skills = data.experience.skills
+    const professionalExperiences = data.experience.professional
+
     return (
         <FlexContainer as="section">
             <AboutContent>
                 <Text as="p" variant="Paragraph">
-                    {data.experience.coverLetter}
+                    {coverLetter}
                 </Text>
-                <Text as="h1" variant="SectionTitle">
-                    {isPortuguese && 'Experiências Profissionais'}
-                    {isEnglish && 'Professional Experiences'}
+                <Text as="h2" variant="SectionTitle">
+                    Habilidades
+                </Text>
+                <SkillSection as="section">
+                    {skills.map((skill) => (
+                        <p>{skill}</p>
+                    ))}
+                </SkillSection>
+                <Text as="h2" variant="SectionTitle">
+                    Experiências Profissionais
                 </Text>
                 <div>
-                    {data.experience.professional.map((exp) => (
+                    {professionalExperiences.map((exp) => (
                         <ProfessionalCard
                             key={exp.id}
                             index={exp.id}
@@ -57,5 +68,18 @@ export const AboutContent = styled.section`
 
     @media (max-width: 800px) {
         max-width: 100%;
+    }
+`
+const SkillSection = styled(FlexContainer)`
+    padding-bottom: 2rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+
+    p {
+        background: ${(props) => props.theme.color.dark};
+        padding: 0.5rem;
+        font-size: 0.5rem;
     }
 `

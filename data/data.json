@@ -76,9 +76,105 @@
                 "image": "/projects/9-aluraquiz.png",
                 "title": "alura quiz",
                 "description": "Aplicação para criar e responder quizes sobre os mais diversos assuntos"
+            },
+            {
+                "id": 10,
+                "image": "/projects/10-socialdistancing.png",
+                "title": "social distancing",
+                "description": "Aplicação para descobrir lugares por onde pessoas com covid passaram"
+            },
+            {
+                "id": 11,
+                "image": "/projects/11-zumthor.png",
+                "title": "zumthor",
+                "description": "Aplicação que utiliza inteligência artificial para ajudar estudantes de arquitetura a projetar"
+            },
+            {
+                "id": 12,
+                "image": "/projects/12-comoprojetar.png",
+                "title": "como projetar",
+                "description": "Blog sobre arquitetura para estudantes e jovens arquitetos. Mais de 1 milhão de visualizações, 100 artigos publicados e 20 mil seguidores nas redes sociais"
+            },
+            {
+                "id": 13,
+                "image": "/projects/13-whatsapp.png",
+                "title": "whatsapp",
+                "description": "Imaginando o whatsapp com senha para conversas e agendamento de envio de mensagens"
+            },
+            {
+                "id": 14,
+                "image": "/projects/14-shoppingcart.png",
+                "title": "carrinho de compras",
+                "description": "Carrinho de compras utilizando boas práticas de React"
+            },
+            {
+                "id": 15,
+                "image": "/projects/15-primeiro-andar.png",
+                "title": "primeiro andar",
+                "description": "Plataforma para estudantes alugarem e encontrarem quartos"
+            },
+            {
+                "id": 16,
+                "image": "/projects/16-eventweeter.png",
+                "title": "eventweeter",
+                "description": "Microblog, tipo o Twitter, mas com enfoque em eventos"
+            },
+            {
+                "id": 17,
+                "image": "/projects/17-bookbook.png",
+                "title": "bookbook",
+                "description": "Rede social para os usuários compartilharem suas leituras atuais"
+            },
+            {
+                "id": 18,
+                "image": "/projects/18-uxarq.png",
+                "title": "ux.arq",
+                "description": "Plataforma de gerenciamento de projetos de arquitetura que utiliza inteligência artificial para auxiliar o arquiteto a criar experiências e atmosferas arquitetônicas"
             }
         ],
         "experience": {
+            "skills": [
+                "ReactJS",
+                "NodeJS",
+                "NextJS",
+                "Typescript",
+                "Javascript",
+                "MongoDB",
+                "Postgres",
+                "Styled-Components",
+                "SASS",
+                "CSS-Modules",
+                "Axios",
+                "FetchAPI",
+                "ContextAPI",
+                "React Hooks",
+                "HTML",
+                "CSS3",
+                "Framer Motion",
+                "Storybook",
+                "Express",
+                "Apollo Server",
+                "Heroku",
+                "Vercel",
+                "Cloudinary",
+                "Git & Github",
+                "Figma",
+                "UI Design",
+                "UX Design",
+                "Design Systems",
+                "BrainJS",
+                "Clean Architecture",
+                "Clean Code",
+                "SOLID",
+                "MVC",
+                "TDD",
+                "Análise de Dados",
+                "Inglês",
+                "Francês",
+                "Espanhol",
+                "Português",
+                "Public Speaking"
+            ],
             "coverLetter": "Desenvolvedor com experiência na criação de aplicações web completas, bonitas, rápidas e seguras, utilizando tecnologias modernas como NextJS, ReactJS, NodeJS, Typescript e Javascript. UI & UX Designer com experiência na concepção de produtos digitais com enfoque em promover a melhor experiência para o usuário, e que geram o máximo de valor possível.",
             "professional": [
                 {
@@ -90,7 +186,7 @@
                     "started": 2016,
                     "finished": null,
                     "current": true,
-                    "description": "Desenvolvedor, designer e produtor de conteúdo para internet. Experiência desenvolvendo aplicações como freelancer, para projetos pessoais e para projetos acadêmicos. Experiência com tecnologias e soluções frontend como ReactJS, NextJS, Typescript, Javascript, React Hooks, Context API, Styled-Components, SASS, Storybook, Framer Motion, Design Systems, HTML, CSS3, fetchAPI, Axios, dentre outras. Experiência com tecnologias e soluções backend como NodeJS, Typescript, Javascript, MongoDB, Postgres, Apollo Server, API's REST, Express, Clean Architecture, Princípios SOLID, Clean Code, MVC, Jest, BrainJS (biblioteca de rede neural - machine learning) dentre outras. Mais de 100 projetos desenvolvidos e publicados no Github. Experiência criando interfaces (UI Design), wireframes, mockups e protótipos de baixa, média e alta fidelidade (UX Design) utilizando Figma, Illustrator, Photoshop, Indesign, dentre outros softwares. Experiência produzindo conteúdo relacionado ao desenvolvimento web e UI / UX Design (mais de 300 vídeos de tutoriais publicados no Youtube)"
+                    "description": "Desenvolvedor, designer e produtor de conteúdo para internet. Experiência desenvolvendo aplicações como freelancer, para projetos pessoais e para projetos acadêmicos. Experiência com tecnologias e soluções frontend como ReactJS, NextJS, Typescript, Javascript, React Hooks, Context API, Styled-Components, SASS, Storybook, Jest, Framer Motion, Design Systems, HTML, CSS3, fetchAPI, Axios, dentre outras. Experiência com tecnologias e soluções backend como NodeJS, Typescript, Javascript, MongoDB, Postgres, Apollo Server, API's REST, Express, Clean Architecture, Princípios SOLID, Clean Code, MVC, Jest, TDD, BrainJS (biblioteca de rede neural - machine learning) dentre outras. Mais de 100 projetos desenvolvidos e publicados no Github. Experiência criando interfaces (UI Design), wireframes, mockups e protótipos de baixa, média e alta fidelidade (UX Design) utilizando Figma, Illustrator, Photoshop, Indesign, dentre outros softwares. Experiência produzindo conteúdo relacionado ao desenvolvimento web e UI / UX Design (mais de 300 vídeos de tutoriais publicados no Youtube)"
                 },
                 {
                     "id": 2,
@@ -102,6 +198,52 @@
                     "finished": null,
                     "current": true,
                     "description": "Professor substituto no departamento de Expressão Gráfica da Universidade Federal do Paraná. Experiência ensinando modelagem 3d, BIM (Revit), desenho 2d (Autocad) e desenho técnico para mais de 300 alunos dos cursos de Engenharia de Produção, Elétrica, Química, Agronômica, Industrial Madeireira e Expressão Gráfica. Experiência concebendo, produzindo e gravando disciplinas online de modelagem 3d e desenho 2d no contexto da COVID-19."
+                },
+                {
+                    "id": 3,
+                    "img": "/exp/pro/ufpr.svg",
+                    "title": "Professor Universitário",
+                    "company": "Centro Universitário Campos de Andrade",
+                    "location": "Curitiba, Brasil",
+                    "started": 2018,
+                    "finished": 2019,
+                    "current": false,
+                    "description": "Professor dos cursos de Ciência da Computação, Arquitetura e Urbanismo e Design de Interiores. Experiência ensinando design thinking, métodos ágeis, design e concepção de produto para mais de 60 alunos de Ciência da Computação. Experiência ensinando métodos e processos de projeto e desenho para mais de 100 alunos de Arquitetura e Design de Interiores."
+                },
+
+                {
+                    "id": 4,
+                    "img": "/exp/pro/ufpr.svg",
+                    "title": "Pesquisador Bolsista",
+                    "company": "Universidade Federal do Paraná",
+                    "location": "Curitiba, Brasil",
+                    "started": 2015,
+                    "finished": 2017,
+                    "current": false,
+                    "description": "Pesquisador bolsista CAPES no Programa de Pós-Graduação em Engenharia de Construção Civil. Experiência com design de experimentos, método científico e análise de dados em Excel."
+                },
+
+                {
+                    "id": 5,
+                    "img": "/exp/pro/ufpr.svg",
+                    "title": "Estagiário",
+                    "company": "a2o-Architecten",
+                    "location": "Hasselt, Bélgica",
+                    "started": 2014,
+                    "finished": 2014,
+                    "current": false,
+                    "description": "Experiência construindo pavilhão de madeira com equipe multidisciplinar e internacional junto ao Albert Kanaal, em Hasselt, Bélgica."
+                },
+                {
+                    "id": 6,
+                    "img": "/exp/pro/ufpr.svg",
+                    "title": "Estagiário",
+                    "company": "Estúdio 41",
+                    "location": "Curitiba, Brasil",
+                    "started": 2013,
+                    "finished": 2013,
+                    "current": false,
+                    "description": "Experiência com a concepção e representação de projetos arquitetônicos. Participação na concepção e representação gráfica do projeto da Nova Estação Antártica do Brasil (Estação Comandante Ferraz). Experiência com detalhamento o detalhamento arquitetônico da sede da Fecomércio, em Porto Alegre."
                 }
             ]
         }
@@ -183,9 +325,105 @@
                 "image": "/projects/9-aluraquiz.png",
                 "title": "alura quiz",
                 "description": "Aplicação para criar e responder quizes sobre os mais diversos assuntos"
+            },
+            {
+                "id": 10,
+                "image": "/projects/10-socialdistancing.png",
+                "title": "social distancing",
+                "description": "Aplicação para descobrir lugares por onde pessoas com covid passaram"
+            },
+            {
+                "id": 11,
+                "image": "/projects/11-zumthor.png",
+                "title": "zumthor",
+                "description": "Aplicação que utiliza inteligência artificial para ajudar estudantes de arquitetura a projetar"
+            },
+            {
+                "id": 12,
+                "image": "/projects/12-comoprojetar.png",
+                "title": "como projetar",
+                "description": "Blog sobre arquitetura para estudantes e jovens arquitetos. Mais de 1 milhão de visualizações, 100 artigos publicados e 20 mil seguidores nas redes sociais"
+            },
+            {
+                "id": 13,
+                "image": "/projects/13-whatsapp.png",
+                "title": "whatsapp",
+                "description": "Imaginando o whatsapp com senha para conversas e agendamento de envio de mensagens"
+            },
+            {
+                "id": 14,
+                "image": "/projects/14-shoppingcart.png",
+                "title": "carrinho de compras",
+                "description": "Carrinho de compras utilizando boas práticas de React"
+            },
+            {
+                "id": 15,
+                "image": "/projects/15-primeiro-andar.png",
+                "title": "primeiro andar",
+                "description": "Plataforma para estudantes alugarem e encontrarem quartos"
+            },
+            {
+                "id": 16,
+                "image": "/projects/16-eventweeter.png",
+                "title": "eventweeter",
+                "description": "Microblog, tipo o Twitter, mas com enfoque em eventos"
+            },
+            {
+                "id": 17,
+                "image": "/projects/17-bookbook.png",
+                "title": "bookbook",
+                "description": "Rede social para os usuários compartilharem suas leituras atuais"
+            },
+            {
+                "id": 18,
+                "image": "/projects/18-uxarq.png",
+                "title": "ux.arq",
+                "description": "Plataforma de gerenciamento de projetos de arquitetura que utiliza inteligência artificial para auxiliar o arquiteto a criar experiências e atmosferas arquitetônicas"
             }
         ],
         "experience": {
+            "skills": [
+                "ReactJS",
+                "NodeJS",
+                "NextJS",
+                "Typescript",
+                "Javascript",
+                "MongoDB",
+                "Postgres",
+                "Styled-Components",
+                "SASS",
+                "CSS-Modules",
+                "Axios",
+                "FetchAPI",
+                "ContextAPI",
+                "React Hooks",
+                "HTML",
+                "CSS3",
+                "Framer Motion",
+                "Storybook",
+                "Express",
+                "Apollo Server",
+                "Heroku",
+                "Vercel",
+                "Cloudinary",
+                "Git & Github",
+                "Figma",
+                "UI Design",
+                "UX Design",
+                "Design Systems",
+                "BrainJS",
+                "Clean Architecture",
+                "Clean Code",
+                "SOLID",
+                "MVC",
+                "TDD",
+                "Análise de Dados",
+                "Inglês",
+                "Francês",
+                "Espanhol",
+                "Português",
+                "Public Speaking"
+            ],
             "coverLetter": "Desenvolvedor com experiência na criação de aplicações web completas, bonitas, rápidas e seguras, utilizando tecnologias modernas como NextJS, ReactJS, NodeJS, Typescript e Javascript. UI & UX Designer com experiência na concepção de produtos digitais com enfoque em promover a melhor experiência para o usuário, e que geram o máximo de valor possível.",
             "professional": [
                 {
