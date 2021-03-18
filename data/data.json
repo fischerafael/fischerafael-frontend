@@ -129,6 +129,62 @@
                 }
             }
         },
+        "projects": [
+            {
+                "id": 1,
+                "image": "/projects/1-fischerafael.png",
+                "title": "fischerafael",
+                "description": "Site pessoal"
+            },
+            {
+                "id": 2,
+                "image": "/projects/2-arquiflow.png",
+                "title": "arquiflow",
+                "description": "Gerador de orçamentos para arquitetos"
+            },
+            {
+                "id": 3,
+                "image": "/projects/3-essenaoesanto.png",
+                "title": "esse não é santo",
+                "description": "App para denunciar políticos que sujam ruas com santinhos"
+            },
+            {
+                "id": 4,
+                "image": "/projects/4-upperschool.png",
+                "title": "upperschool",
+                "description": "Plataforma de ensino e aprendizado online"
+            },
+            {
+                "id": 5,
+                "image": "/projects/5-devvr.png",
+                "title": "devvr",
+                "description": "App tipo o Happn, mas com enfoque em desenvolvedores"
+            },
+            {
+                "id": 6,
+                "image": "/projects/6-garder.png",
+                "title": "garder",
+                "description": "App para encontrar jardineiros"
+            },
+            {
+                "id": 7,
+                "image": "/projects/7-comerciolocal.png",
+                "title": "comércio local",
+                "description": "Plataforma para encontrar comércios vizinhos"
+            },
+            {
+                "id": 8,
+                "image": "/projects/8-devit.png",
+                "title": "devit",
+                "description": "Aplicação de produtividade para devs baseada na técnica do Pomodoro"
+            },
+            {
+                "id": 9,
+                "image": "/projects/9-aluraquiz.png",
+                "title": "alura quiz",
+                "description": "Aplicação para criar e responder quizes sobre os mais diversos assuntos"
+            }
+        ],
         "experience": {
             "coverLetter": "Desenvolvedor com experiência na criação de aplicações web completas, bonitas, rápidas e seguras, utilizando tecnologias modernas como NextJS, ReactJS, NodeJS, Typescript e Javascript. UI & UX Designer com experiência na concepção de produtos digitais com enfoque em promover a melhor experiência para o usuário, e que geram o máximo de valor possível.",
             "professional": [
